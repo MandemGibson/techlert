@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:techlert/Screens/login_screen.dart';
+import 'signup_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -82,7 +83,10 @@ class HomePage extends StatelessWidget {
                               backgroundColor:MaterialStatePropertyAll(Color.fromRGBO(239, 54, 54, 1)),
                               shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                               borderRadius: BorderRadius.all(Radius.circular(50))))),
-                            onPressed: (){}, child:const Text('SIGN UP',
+                            onPressed: (){
+                              Navigator.push(context, 
+                                  MaterialPageRoute(builder: (BuildContext context) => const SignupScreen()));
+                            }, child:const Text('SIGN UP',
                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, fontFamily: 'Urbanist', fontStyle: FontStyle.normal),
                                 textAlign: TextAlign.center,)),
                         ),

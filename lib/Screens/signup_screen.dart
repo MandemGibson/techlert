@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:techlert/Screens/homepage.dart';
+import 'homepage.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-bool _isObsecure = true;
-bool click = true;
-
+class _SignupScreenState extends State<SignupScreen> {
+  bool _isObsecure = true;
+  bool click = true;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -35,7 +35,7 @@ bool click = true;
         children: [
           const Padding(
             padding: EdgeInsets.only(top: 70),
-            child: Center(child: Text('LOGIN', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 32, fontFamily: 'Ubuntu', fontStyle: FontStyle.normal,color: Colors.black),)),
+            child: Center(child: Text('SIGN UP', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 32, fontFamily: 'Ubuntu', fontStyle: FontStyle.normal,color: Colors.black),)),
           ),
           const Padding(
             padding: EdgeInsets.only(top: 40),
@@ -106,7 +106,7 @@ bool click = true;
                   backgroundColor: MaterialStatePropertyAll(Color.fromRGBO(254, 59, 59, 1)),
                   shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))))
                 ),
-                onPressed: (){}, child: const Text('LOGIN',
+                onPressed: (){}, child: const Text('SIGN UP',
                 style: TextStyle(fontFamily: 'Ubuntu', fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),)),
             ),
           ),
@@ -128,12 +128,12 @@ bool click = true;
         ],        
       ),
     );
-  }
+    }
      Icon _setPasswordIcon(){
       if (_isObsecure){
         return const Icon(Icons.visibility);
       }else{
         return const Icon(Icons.visibility_off);
       }
-     }
+    }
 }
